@@ -13,7 +13,7 @@
 | プロジェクト | 内容 | 技術 |
 | --- | --- | --- |
 | **[voicekey](https://github.com/Tomato-1101/voicekey)** | macOS / Windows 対応の常駐型音声入力ツール。ホットキーを押して話すと、いま入力していたウィンドウにそのまま文字が入る。STT プロバイダ差し替え可・ストリーミング/バッチ両対応・自動更新つき。 | Swift / SwiftUI, Python, GitHub Actions |
-| **[Hermes](https://github.com/Tomato-1101/Hermes)** | 「**AI は操作しない**」という一点に賭けた RPA。決定論的なエンジンが操作の記録・編集・再生を担当し、AI は判定と生成だけを行ってマウスには触れない。現状は pre-alpha で、README にもそう書いてある。 | TypeScript, Electron, Swift サイドカー |
+| **[XNewsBot](https://github.com/Tomato-1101/XNewsBot)** | X から朝と夜にニュースを集め、Claude が選別・要約して LINE で配信するボット。受け取るジャンルと配信時刻は Bot との会話で設定できる。常駐サーバー（Webhook と配信スケジューラー）と AI のキュレーションを別々に動かす構成。毎日運用中。 | Python, FastAPI, APScheduler, LINE Messaging API, Claude Code |
 | **[XAgent](https://github.com/Tomato-1101/XAgent)** | 承認なしには投稿できない X 運用エージェント。状態遷移をすべて許可リストで検証しているので、「ボットが勝手に投稿した」はコードレベルで起こり得ない。約束ではなく構造で担保している。 | Python, FastAPI, React 19 |
 | **[meeting-transcriber](https://github.com/Tomato-1101/meeting-transcriber)** | 会議音声を構造化されたノートに変換する（ノイズ除去 → VAD → 文字起こし → 話者分離 → 要約）。512MB の無料枠で動かし切るという制約が、そのまま設計を決めた。 | FastAPI, React, faster-whisper, Docker |
 | **[menubar-drawer](https://github.com/Tomato-1101/menubar-drawer)** | 過密になった macOS のメニューバーを取り戻す常駐アプリ。隠れたステータス項目をガラスの引き出しにまとめる。各アプリのメニューを開かず、アクセシビリティツリーから直接読む。 | Swift, AppKit, Accessibility API |

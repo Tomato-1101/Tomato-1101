@@ -13,7 +13,7 @@
 | 项目 | 简介 | 技术栈 |
 | --- | --- | --- |
 | **[voicekey](https://github.com/Tomato-1101/voicekey)** | 支持 macOS 与 Windows 的常驻语音输入工具。按下热键说话，转写结果直接落进你原本正在输入的窗口。STT 提供方可替换，支持流式与批量两种模式，并带自动更新。 | Swift / SwiftUI, Python, GitHub Actions |
-| **[Hermes](https://github.com/Tomato-1101/Hermes)** | 建立在一条原则之上的 RPA：**AI 永不执行操作**。确定性引擎负责录制、编辑与回放操作流程，AI 层只做判定与生成，绝不碰鼠标。目前处于 pre-alpha，README 里也照实写明。 | TypeScript, Electron, Swift sidecar |
+| **[XNewsBot](https://github.com/Tomato-1101/XNewsBot)** | 每天早晚从 X 收集新闻，由 Claude 筛选、摘要后通过 LINE 推送的机器人。订阅的类别和推送时间可以直接和机器人对话设置。常驻服务器（Webhook 与推送调度）和 AI 整理分开运行。每天都在运行。 | Python, FastAPI, APScheduler, LINE Messaging API, Claude Code |
 | **[XAgent](https://github.com/Tomato-1101/XAgent)** | 一个没有你批准就无法发帖的 X 运营代理。所有状态迁移都对照白名单校验，因此「机器人擅自发布」在代码层面就不可能发生——靠的是结构，而不是承诺。 | Python, FastAPI, React 19 |
 | **[meeting-transcriber](https://github.com/Tomato-1101/meeting-transcriber)** | 把会议录音变成结构化笔记：降噪 → VAD → 转写 → 说话人分离 → 摘要。必须跑在 512MB 免费额度内这一约束，直接决定了整体架构。 | FastAPI, React, faster-whisper, Docker |
 | **[menubar-drawer](https://github.com/Tomato-1101/menubar-drawer)** | 夺回被塞满的 macOS 菜单栏：把隐藏的状态项收进一个玻璃抽屉，并且不打开各应用的菜单，直接从辅助功能树中读取。 | Swift, AppKit, Accessibility API |

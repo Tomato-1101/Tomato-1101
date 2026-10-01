@@ -2,40 +2,53 @@
 
 **[English](README.md) | [日本語](README.ja.md) | [中文](README.zh.md)**
 
-Independent developer. I build **native desktop tools** and **AI agents that keep a human in the loop** — usually starting from a problem I hit myself, then polishing it until it holds up as a real product.
-
-Most of what I ship lives at the awkward layer between an app and the operating system: global hotkeys, accessibility trees, audio capture, menu bars, permission prompts. It is the part that demos badly and breaks in the field, which is exactly why I find it interesting.
+I build software that **listens** and software that **watches**: voice interfaces that put speech exactly where you need it, and real-time pipelines that pull a signal out of noisy markets — plus AI agents that are not allowed to act without a human. Most of it runs every day on my own machines.
 
 ---
 
-## Featured work
+## Voice
 
 | Project | What it is | Stack |
 | --- | --- | --- |
-| **[voicekey](https://github.com/Tomato-1101/voicekey)** | Hotkey-driven voice input for macOS and Windows. Press a key, speak, and the transcript lands in whatever window you were already typing into. Pluggable STT providers, streaming and batch modes, auto-update. | Swift / SwiftUI, Python, GitHub Actions |
-| **[XNewsBot](https://github.com/Tomato-1101/XNewsBot)** | A LINE bot that collects news from X every morning and evening, has Claude curate and summarize it, and delivers it on a schedule each subscriber sets by chatting with the bot. The always-on server (webhook + scheduler) and the scheduled AI curation run as separate parts. Running daily. | Python, FastAPI, APScheduler, LINE Messaging API, Claude Code |
-| **[XAgent](https://github.com/Tomato-1101/XAgent)** | A posting agent for X that cannot post without you. Every state transition is validated against an allow-list, so "the bot published something on its own" is a code-level impossibility, not a promise. | Python, FastAPI, React 19 |
-| **[meeting-transcriber](https://github.com/Tomato-1101/meeting-transcriber)** | Meeting audio to structured notes — denoise, VAD, transcribe, diarize, summarize. Tuned to survive inside a 512 MB free tier, which shaped most of the architecture. | FastAPI, React, faster-whisper, Docker |
-| **[menubar-drawer](https://github.com/Tomato-1101/menubar-drawer)** | Reclaims a crowded macOS menu bar by collapsing hidden status items into a glass drawer — read straight from the accessibility tree, without opening each app's menu. | Swift, AppKit, Accessibility API |
+| **[voicekey](https://github.com/Tomato-1101/voicekey)** | Hotkey-driven voice input for macOS and Windows. Press a key, speak, and the transcript lands in whatever window you were typing into. Pluggable STT providers, streaming and batch modes, auto-update. | Swift / SwiftUI, Python, GitHub Actions |
+| **[lecture-ai](https://github.com/Tomato-1101/lecture-ai)** | Records lectures on iPhone with a native recorder that keeps capturing in the background, cuts segments on pauses instead of a timer, and uploads disk-first. Transcription falls back across four Whisper engines with a hallucination filter; answers are grounded only in the transcript. | Swift (AVAudioSession), Cloudflare Workers + D1, React PWA, Python |
+| **[english-live-tutor](https://github.com/Tomato-1101/english-live-tutor)** | A real-time voice English tutor over WebRTC with a full-duplex voice model: screen tools through a delegation round trip, turn-taking enforced in the prompt, and a session lifecycle built around per-second billing. | React 19, Cloudflare Workers + D1, WebRTC |
+| **[meeting-transcriber](https://github.com/Tomato-1101/meeting-transcriber)** | Meeting audio to structured notes — denoise, VAD, transcribe, diarize, summarize — tuned to fit inside a 512 MB free tier. | FastAPI, React, faster-whisper, Docker |
+
+## Markets and on-chain
+
+| Project | What it is | Stack |
+| --- | --- | --- |
+| **[pump-watch](https://github.com/Tomato-1101/pump-watch)** | Watches BSC meme tokens and alerts on Telegram when one is clearly taking off. Three detection lanes — trending confirmation, API polling, and decoding PancakeSwap / four.meme swaps straight from chain logs — sharing rate-limit budgets across processes and one SQLite file across writers. Monitor only: no keys, no trades. 508 tests. | Python (stdlib only), BSC JSON-RPC, SQLite WAL, Telegram Bot API |
+| **[scalplab](https://github.com/Tomato-1101/scalplab)** | Tick-level research lab for Japanese equities: a crash-safe tick recorder, a tick-replay backtest checked against a vectorised path, indicators written from scratch with golden-value tests, and nightly walk-forward evaluation. Places no orders. 290 tests. | Python, pandas, parquet, WebSocket (RFC 6455, stdlib) |
+
+## Agents with a human in the loop
+
+| Project | What it is | Stack |
+| --- | --- | --- |
+| **[XAgent](https://github.com/Tomato-1101/XAgent)** | A posting agent for X that cannot post without you. Every state transition is validated against an allow-list, so "the bot published on its own" is impossible at the code level, not a promise. | Python, FastAPI, React 19 |
+| **[XNewsBot](https://github.com/Tomato-1101/XNewsBot)** | A LINE bot that collects news from X twice a day, has Claude curate it, and delivers on each subscriber's own schedule. The headless AI step runs with a narrowed tool set against prompt injection. Running daily. | Python, FastAPI, APScheduler, LINE Messaging API |
+| **[menubar-drawer](https://github.com/Tomato-1101/menubar-drawer)** | Collapses a crowded macOS menu bar into a glass drawer, reading hidden status items straight from the accessibility tree. | Swift, AppKit, Accessibility API |
 
 ---
 
 ## How I work
 
-- **Ship the unglamorous half.** Permission dialogs, first-run onboarding, what the UI shows while it is waiting — the parts users actually hit. A feature that works only on the happy path is not finished.
-- **Constraints get written down, not remembered.** Repositories carry an `OVERVIEW.md` / `CLAUDE.md` describing the branch policy, the design decisions, and the mistakes that produced them. Some of those files are in these repos; they are there on purpose.
-- **AI agents are collaborators, not autocomplete.** I develop with Claude Code daily, including on a ~50k-line cross-platform app. The interesting engineering is in deciding what the agent is *not* allowed to do — which is the same idea Hermes and XAgent are both built around.
-- **Honest status over impressive status.** If something is pre-alpha, the README says pre-alpha.
+- **Ship the unglamorous half.** Permission dialogs, background audio sessions, reconnects, rate limits, what the UI shows while it waits — the parts that demo badly and break in the field.
+- **Measure, then claim.** Detection rules are changed by replaying stored data and comparing results before and after; READMEs say what was run and what was only counted.
+- **Agents get boundaries, not trust.** I develop with Claude Code every day. The interesting engineering is deciding what an agent is *not* allowed to do.
+- **Honest status over impressive status.** If something is pre-alpha, the README says so.
 
 ---
 
 ## Tech
 
 **Languages** Swift · Python · TypeScript
-**Desktop** SwiftUI, AppKit, Accessibility API, CoreAudio, Electron
-**Web** FastAPI, React 19, Next.js, Astro, Tailwind
-**Data & infra** SQLite, Supabase, Cloudflare Workers/D1, Docker, GitHub Actions
-**AI** Claude, Whisper-family STT, Deepgram, streaming transcription pipelines
+**Voice** AVAudioSession, CoreAudio, WebRTC, Whisper (Groq, whisper.cpp, faster-whisper), Deepgram, VAD, diarization, realtime voice models
+**Markets** BSC JSON-RPC log decoding, GMGN / DexScreener / GeckoTerminal, tick data, parquet, walk-forward backtesting
+**Desktop** SwiftUI, AppKit, Accessibility API, Electron
+**Web and infra** FastAPI, React 19, Next.js, Cloudflare Workers / D1 / KV, SQLite, Supabase, Docker, GitHub Actions
+**AI** Claude (Claude Code, headless `claude -p`), OpenAI realtime voice
 
 ---
 

@@ -6,7 +6,7 @@ I make voice input tools and bots that watch crypto and stock markets. Most of t
 
 ### Voice
 
-- [voicekey](https://github.com/Tomato-1101/voicekey): voice input for macOS and Windows. Hold a hotkey, speak, and the text is typed into the active window. I use it every day. (Swift, Python)
+- [voicekey](https://github.com/Tomato-1101/voicekey): voice input for macOS and Windows. Hold a hotkey, speak, and the text is typed into the active window. I use it every day. Site: [voicekey.app](https://voicekey.app) (Swift, Python)
 - [lecture-ai](https://github.com/Tomato-1101/lecture-ai): records lectures on iPhone, transcribes them, and answers questions about the content. (Swift, TypeScript, Cloudflare Workers)
 - [english-live-tutor](https://github.com/Tomato-1101/english-live-tutor): English conversation practice with a realtime voice AI in the browser. (TypeScript, WebRTC)
 - [meeting-transcriber](https://github.com/Tomato-1101/meeting-transcriber): turns meeting recordings into a transcript with speaker labels and a summary. (Python, faster-whisper)

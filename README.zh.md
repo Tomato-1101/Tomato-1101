@@ -6,7 +6,7 @@
 
 ### 语音
 
-- [voicekey](https://github.com/Tomato-1101/voicekey)：macOS / Windows 的语音输入。按住快捷键说话，文字会直接输入到当前窗口。我每天都在用。(Swift, Python)
+- [voicekey](https://github.com/Tomato-1101/voicekey)：macOS / Windows 的语音输入。按住快捷键说话，文字会直接输入到当前窗口。我每天都在用。网站：[voicekey.app](https://voicekey.app) (Swift, Python)
 - [lecture-ai](https://github.com/Tomato-1101/lecture-ai)：在 iPhone 上录课并转成文字，可以就内容提问。(Swift, TypeScript, Cloudflare Workers)
 - [english-live-tutor](https://github.com/Tomato-1101/english-live-tutor)：在浏览器里和实时语音 AI 练英语口语。(TypeScript, WebRTC)
 - [meeting-transcriber](https://github.com/Tomato-1101/meeting-transcriber)：把会议录音转成带说话人标注的文字稿和摘要。(Python, faster-whisper)

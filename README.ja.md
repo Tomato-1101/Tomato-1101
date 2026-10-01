@@ -6,7 +6,7 @@
 
 ### 音声
 
-- [voicekey](https://github.com/Tomato-1101/voicekey): macOS / Windows 用の音声入力です。ホットキーを押しながら話すと、入力中のウィンドウに文字が入ります。毎日使っています。サイト: [voicekey.app](https://voicekey.app) (Swift, Python)
+- [voicekey](https://github.com/Tomato-1101/voicekey): macOS / Windows 用の音声入力です。ホットキーを押しながら話すと、入力中のウィンドウに文字が入ります。毎日使っています。サイト: [voicekey.vercel.app](https://voicekey.vercel.app) (Swift, Python)
 - [lecture-ai](https://github.com/Tomato-1101/lecture-ai): iPhone で講義を録音して文字起こしし、内容について質問できるアプリです。(Swift, TypeScript, Cloudflare Workers)
 - [english-live-tutor](https://github.com/Tomato-1101/english-live-tutor): ブラウザで音声 AI と英会話の練習ができるアプリです。(TypeScript, WebRTC)
 - [meeting-transcriber](https://github.com/Tomato-1101/meeting-transcriber): 会議の録音から、話者付きの文字起こしと要約を作ります。(Python, faster-whisper)

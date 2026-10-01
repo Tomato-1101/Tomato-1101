@@ -4,6 +4,8 @@
 
 I make voice input tools and bots that watch crypto and stock markets. Most of the code is written with Claude Code.
 
+Portfolio: [zhao-yunbo.zhaounhaku.workers.dev](https://zhao-yunbo.zhaounhaku.workers.dev)
+
 ### Voice
 
 - [voicekey](https://github.com/Tomato-1101/voicekey): voice input for macOS and Windows. Hold a hotkey, speak, and the text is typed into the active window. I use it every day. Site: [voicekey.vercel.app](https://voicekey.vercel.app) (Swift, Python)

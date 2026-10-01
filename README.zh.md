@@ -4,6 +4,8 @@
 
 我做语音输入工具，以及盯加密货币和股票行情的机器人。代码基本都是用 Claude Code 写的。
 
+作品集: [zhao-yunbo.zhaounhaku.workers.dev](https://zhao-yunbo.zhaounhaku.workers.dev)
+
 ### 语音
 
 - [voicekey](https://github.com/Tomato-1101/voicekey)：macOS / Windows 的语音输入。按住快捷键说话，文字会直接输入到当前窗口。我每天都在用。网站：[voicekey.vercel.app](https://voicekey.vercel.app) (Swift, Python)

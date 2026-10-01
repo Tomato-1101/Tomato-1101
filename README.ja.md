@@ -4,6 +4,8 @@
 
 音声入力のツールと、仮想通貨や株の値動きを見張るボットを作っています。コードはほぼ Claude Code で書いています。
 
+ポートフォリオ: [zhao-yunbo.zhaounhaku.workers.dev](https://zhao-yunbo.zhaounhaku.workers.dev)
+
 ### 音声
 
 - [voicekey](https://github.com/Tomato-1101/voicekey): macOS / Windows 用の音声入力です。ホットキーを押しながら話すと、入力中のウィンドウに文字が入ります。毎日使っています。サイト: [voicekey.vercel.app](https://voicekey.vercel.app) (Swift, Python)
